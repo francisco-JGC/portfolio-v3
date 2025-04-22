@@ -1,0 +1,38 @@
+@use "../../sass/index" as *;
+
+.socialMediaItem {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: relative;
+  border: 1px solid rgb(71, 82, 122);
+  transition: all ease-in-out 0.3s;
+
+  i {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: $color-brand;
+    border: transparent;
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.inverted {
+  background-color: $color-brand;
+  i {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: rgb(71, 82, 122);
+  }
+}
