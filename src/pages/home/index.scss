@@ -1,0 +1,97 @@
+@use "../../sass/index" as *;
+
+.background-home {
+  background-image: url("../../assets/img/background-home.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: rgb(26, 30, 45, 0.95);
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    content: "CHICO DEV";
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1;
+    font-size: 17em;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(71, 82, 122);
+    text-stroke: 2px #fff;
+  }
+}
+
+.home-page {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+
+    h5 {
+      font-size: 1.5em;
+    }
+    h1 {
+      font-size: 4em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+
+    p:nth-of-type(2) {
+      color: #ccc;
+      font-style: italic;
+      font-size: 1em;
+      margin-top: 0.5em;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-style: normal;
+
+    .email {
+      text-decoration: none;
+      color: $color-brand;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 0.25em;
+      font-size: 2.5em;
+      font-weight: bold;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-brand;
+      }
+    }
+
+    span {
+      font-size: 1.3em;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 2em;
+  }
+}
