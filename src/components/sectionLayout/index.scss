@@ -1,0 +1,24 @@
+@use "../../sass/index" as *;
+
+.section-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+  }
+}
+
+@include desktop {
+  .section-layout {
+    .container {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+  }
+}
