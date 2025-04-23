@@ -1,0 +1,23 @@
+@use "../../sass/index" as *;
+
+.blur-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba($color-accent, 0.2);
+  filter: drop-shadow(0 0 30px rgba($color-accent, 1)) blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.05s ease;
+  opacity: 0;
+  z-index: -1;
+
+  &.visible {
+    opacity: 1;
+  }
+}
