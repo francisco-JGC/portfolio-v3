@@ -102,3 +102,30 @@
     justify-content: center;
   }
 }
+
+@include mobile {
+  .home-page {
+    gap: 3em;
+    &__info {
+      h5 {
+        font-size: 0.9em;
+      }
+      h1 {
+        font-size: 1.9em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+
+    &__address {
+      .email {
+        font-size: 1.5em;
+      }
+
+      span {
+        font-size: 1em;
+      }
+    }
+  }
+}
