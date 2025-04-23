@@ -5,7 +5,7 @@
   height: 60px;
   border-radius: 100%;
   position: relative;
-  border: 1px solid rgb(71, 82, 122);
+  border: 1px solid $color-line;
   transition: all ease-in-out 0.3s;
 
   i {
@@ -33,6 +33,6 @@
   }
 
   &:hover {
-    background-color: rgb(71, 82, 122);
+    background-color: $color-line;
   }
 }
