@@ -1,0 +1,73 @@
+@use "../../sass/index" as *;
+
+.footer {
+  background-color: $color-background;
+  color: $color-line;
+  padding: 3em 1em;
+  text-align: center;
+  border-top: 1px solid $color-line;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  &__brand {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    img {
+      width: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: $color-line;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.5em;
+    font-size: 1.5em;
+
+    a {
+      color: $color-line;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      i {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: $color-line;
+  }
+}
