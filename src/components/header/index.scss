@@ -1,7 +1,7 @@
 @use "../../sass/index" as *;
 
 .header {
-  padding: 1.5em 5em;
+  padding: 1.5em;
   width: 100%;
   position: fixed;
   top: 0;
@@ -10,12 +10,40 @@
   transition: all 0.3s ease-in-out;
   background-color: rgb(0, 0, 0, 0.1);
 
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+
+    @media (width <= 950px) {
+      display: block;
+    }
+  }
+
   .header-container {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+
+    @media (width <= 1050px) {
+      font-size: 0.9rem;
+    }
+
+    @media (width <= 950px) {
+      display: none;
+    }
   }
 
   .logo-container {
@@ -27,7 +55,7 @@
     color: #fff;
 
     img {
-      width: calc(2rem + 1vw);
+      width: 45px;
       //width: 30px;
     }
   }
@@ -57,4 +85,36 @@
 
 .header-container--hide {
   transform: translateY(-100%);
+}
+
+.header-open {
+  display: block;
+  height: 100dvh;
+  background-color: rgba($color-background, 1);
+  transform: none;
+  overflow: hidden;
+
+  .header-container {
+    flex-wrap: wrap;
+    height: 100dvh;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    height: 100dvh;
+    .navigation {
+      margin-top: 5em;
+    }
+
+    .download-cv {
+      margin-bottom: 10em;
+    }
+
+    .navigation-list {
+      flex-direction: column;
+    }
+  }
 }
