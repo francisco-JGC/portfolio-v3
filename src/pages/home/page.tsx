@@ -1,6 +1,8 @@
 import { SectionLayout } from "../../components/sectionLayout"
 import { SocialMediaItem } from "../../components/socialMediaItem"
+import { ABOUT_EXPERIENCE_ITEMS } from "../../data/aboutExperienciaItem"
 import { SOCIAL_ITEMS } from "../../data/socialMedia"
+import { AboutStatCard } from "./components/aboutStatCard"
 import './index.scss'
 
 export const HomePage = () => {
@@ -20,6 +22,16 @@ export const HomePage = () => {
           <a href="mailto:jjjchico1@gmail.com" className="email">jjjchico1@gmail.com</a>
           <span>León - Nicaragua</span>
         </address>
+
+        <div className="home-page__about-experience">
+          {
+            ABOUT_EXPERIENCE_ITEMS.map((item, index) => {
+              return (
+                <AboutStatCard key={index} title={item.title} subject={item.subject} icon={item.icon} />
+              )
+            })
+          }
+        </div>
 
         <div className="home-page__social-media">
           {

@@ -14,19 +14,6 @@
     width: 100%;
     height: 100%;
   }
-
-  &::before {
-    content: "CHICO DEV";
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    z-index: 1;
-    font-size: 17em;
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 2px $color-line;
-    text-stroke: 2px #fff;
-  }
 }
 
 .home-page {
@@ -39,6 +26,9 @@
   &__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 0.7em;
 
     h5 {
@@ -64,6 +54,11 @@
     flex-direction: column;
     gap: 1em;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
     .email {
       text-decoration: none;
@@ -93,5 +88,17 @@
   &__social-media {
     display: flex;
     gap: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__about-experience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
   }
 }
