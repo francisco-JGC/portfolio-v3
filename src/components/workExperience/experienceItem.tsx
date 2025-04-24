@@ -12,8 +12,9 @@ export const ExperienceItem = ({ experience }: Props) => {
 
   return (
     <div className="experience-item" ref={parentRef} onMouseMove={onMouseMove}>
-      <Img src={experience.brand} sizes="200" width={100} alt={experience.company_name} />
-
+      <a href={experience.page_url} target="_blank">
+        <Img src={experience.brand} sizes="200" width={100} alt={experience.company_name} />
+      </a>
       <div className="experience-info"
         style={{
           transform: "translate(-50%, -50%)",

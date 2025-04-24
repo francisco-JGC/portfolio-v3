@@ -9,6 +9,7 @@ export interface WorkExperience {
   start_date: string;
   end_date: string;
   brand: string;
+  page_url: string;
 }
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -20,6 +21,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start_date: "04.2023",
     end_date: "08.2024",
     brand: regxiBrand,
+    page_url: "https://regxi.com/en/",
   },
   {
     company_name: "Contollo Consulting",
@@ -29,6 +31,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start_date: "10.2024",
     end_date: "02.2025",
     brand: contolloBrand,
+    page_url: "https://www.contollo.net",
   },
   {
     company_name: "Ti House",
@@ -38,5 +41,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start_date: "03.2021",
     end_date: "12.2022",
     brand: tiHouseBrand,
+    page_url: "https://tihouseni.com",
   },
 ];
