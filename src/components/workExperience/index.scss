@@ -7,6 +7,17 @@
   align-items: center;
   justify-content: center;
   padding: 2em 0;
+
+  @media (width < 940px) {
+    gap: 5em;
+  }
+
+  @media (width < 765px) {
+    gap: 2em;
+    img {
+      width: 70px;
+    }
+  }
 }
 
 .experience-item {
@@ -54,5 +65,10 @@
   100% {
     width: 300px;
     opacity: 1;
+  }
+}
+
+@media (max-width <= 768px) {
+  .experience-item {
   }
 }
