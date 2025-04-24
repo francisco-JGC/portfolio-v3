@@ -1,0 +1,42 @@
+@use "../../../../sass/index" as *;
+
+.technologie-item {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: crosshair;
+
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+  }
+  .technologie-name {
+    display: none;
+  }
+
+  &:hover {
+    .background {
+      filter: blur(5px);
+      opacity: 0.5;
+    }
+
+    .technologie-name {
+      display: block;
+      background: rgba($color-accent, 0.4);
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      z-index: 1;
+      backdrop-filter: blur(5px);
+      font-weight: bold;
+    }
+  }
+}
