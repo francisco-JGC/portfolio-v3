@@ -29,7 +29,7 @@ export const AboutPage = () => {
                 {
                   SOFT_SKILLS.map((item) => {
                     return (
-                      <li className="skills-list__item">
+                      <li className="skills-list__item" key={item}>
                         <i className="fa fa-check" />
                         <span>{item}</span>
                       </li>
