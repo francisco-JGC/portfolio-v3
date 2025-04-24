@@ -1,0 +1,58 @@
+@use "../../sass/index" as *;
+
+.work-experience {
+  background-color: #fff;
+  display: flex;
+  gap: 10em;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+.experience-item {
+  position: relative;
+
+  .experience-info {
+    position: absolute;
+    display: block;
+    background-color: rgba($color-line, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1em;
+    border-radius: 5px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 1;
+
+    .icon {
+      color: $color-accent;
+      margin-right: 1em;
+    }
+  }
+
+  &:hover {
+    .experience-info {
+      width: 300px;
+      opacity: 1;
+      animation: showExperienceInfo 0.3s ease forwards;
+    }
+  }
+}
+
+@keyframes showExperienceInfo {
+  0% {
+    width: 100px;
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    opacity: 1;
+  }
+}

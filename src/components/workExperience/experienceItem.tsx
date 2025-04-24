@@ -1,0 +1,32 @@
+import { WorkExperience } from "../../data/workExperience"
+import { useCursorFollower } from "../../hooks/useCursorFollowe"
+import { Img } from "../img"
+import './index.scss'
+
+interface Props {
+  experience: WorkExperience
+}
+
+export const ExperienceItem = ({ experience }: Props) => {
+  const { parentRef, position, onMouseMove } = useCursorFollower();
+
+  return (
+    <div className="experience-item" ref={parentRef} onMouseMove={onMouseMove}>
+      <Img src={experience.brand} sizes="200" width={100} alt={experience.company_name} />
+
+      <div className="experience-info"
+        style={{
+          transform: "translate(-50%, -50%)",
+          left: `${position.x + 170}px`,
+          top: `${position.y + 170}px`,
+          pointerEvents: "none",
+        }}
+      >
+        <h3><i className="fa fa-home icon" />{experience.company_name}</h3>
+        <h4>{experience.position}</h4>
+        <span>{experience.start_date} - {experience.end_date}</span>
+        <p>{experience.description}</p>
+      </div>
+    </div>
+  )
+}
