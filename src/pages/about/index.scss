@@ -120,3 +120,30 @@
     }
   }
 }
+
+@media (width <= 600px) {
+  .about-page {
+    .title {
+      h2 {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 0.9em;
+      }
+    }
+    .about-me {
+      h3 {
+        text-align: center;
+        width: 100%;
+      }
+      .about-me {
+        &__content,
+        &__skills,
+        &__technologies {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
