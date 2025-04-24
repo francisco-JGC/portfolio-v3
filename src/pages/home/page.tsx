@@ -7,7 +7,7 @@ import './index.scss'
 
 export const HomePage = () => {
   return (
-    <SectionLayout className="background-home">
+    <SectionLayout className="background-home" id="home">
       <section className="home-page">
         <header className="home-page__info">
           <h5>Hello I'M</h5>
