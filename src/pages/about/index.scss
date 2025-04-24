@@ -1,0 +1,122 @@
+@use "../../sass/index" as *;
+
+.about {
+  background-color: #fff;
+  color: #111;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.3em;
+    text-align: center;
+
+    h2 {
+      letter-spacing: 3px;
+      position: relative;
+      padding-bottom: 0.5em;
+      width: fit-content;
+      font-size: 1.1em;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 2px;
+        border-radius: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-accent;
+      }
+    }
+  }
+
+  .underline {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 45%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &::before {
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  .about-me {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3em;
+
+    &__content,
+    &__technologies {
+      width: 47%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      color: #444;
+      line-height: 2em;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+
+      i {
+        color: $color-accent;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      strong {
+        color: #333;
+      }
+    }
+
+    &__bio,
+    &__skills {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      p {
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .technologies-list {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+  }
+}
