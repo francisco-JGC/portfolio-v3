@@ -17,9 +17,9 @@ export const ExperienceItem = ({ experience }: Props) => {
       </a>
       <div className="experience-info"
         style={{
-          transform: "translate(-50%, -50%)",
-          left: `${position.x + 170}px`,
-          top: `${position.y + 170}px`,
+          transform: "translate(0, 0)",
+          left: `${position.x - 30}px`,
+          top: `${position.y + 30}px`,
           pointerEvents: "none",
         }}
       >
