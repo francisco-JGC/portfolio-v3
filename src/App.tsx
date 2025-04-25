@@ -1,6 +1,7 @@
 import './App.css'
 import { Footer } from './components/footer'
 import { Header } from './components/header'
+import { Services } from './components/services'
 import { WorkExperience } from './components/workExperience'
 import { AboutPage } from './pages/about/page'
 import { HomePage } from './pages/home/page'
@@ -16,6 +17,7 @@ function App() {
         <WorkExperience />
         <ProjectsPage />
         <AboutPage />
+        <Services />
       </div>
 
       <Footer />
